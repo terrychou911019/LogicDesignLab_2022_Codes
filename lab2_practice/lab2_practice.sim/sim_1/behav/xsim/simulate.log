@@ -1,0 +1,16 @@
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+         lab2_practice  Pass Pattern NO.           0          
+         lab2_practice  Pass Pattern NO.           1          
+         lab2_practice  Pass Pattern NO.           2          
+         lab2_practice  Pass Pattern NO.           3          
+         lab2_practice  Pass Pattern NO.           4          
+         lab2_practice  Pass Pattern NO.           5          
+         lab2_practice  Pass Pattern NO.           6          
+         lab2_practice  Pass Pattern NO.           7          
+         lab2_practice  Pass Pattern NO.           8          
+         lab2_practice  Pass Pattern NO.           9          
+=================   lab2_practice  Your colleagues used the information defeating the enemy.    ==============================
+
+
+$finish called at time : 25720 ns : File "C:/Users/user/lab2_practice/lab2_practice.srcs/sim_1/imports/lab2_practice_student_template/lab2_pracetice_tb.v" Line 76

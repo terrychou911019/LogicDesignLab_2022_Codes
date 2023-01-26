@@ -1,0 +1,395 @@
+
+*** Running vivado
+    with args -log lab4_1.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source lab4_1.tcl
+
+
+****** Vivado v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source lab4_1.tcl -notrace
+Command: synth_design -top lab4_1 -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 21388 
+WARNING: [Synth 8-6901] identifier 'BCD3' is used before its declaration [C:/Users/user/lab4_test/lab4_test.srcs/sources_1/imports/lab4_template/lab4_1.v:29]
+WARNING: [Synth 8-6901] identifier 'BCD2' is used before its declaration [C:/Users/user/lab4_test/lab4_test.srcs/sources_1/imports/lab4_template/lab4_1.v:29]
+WARNING: [Synth 8-6901] identifier 'BCD1' is used before its declaration [C:/Users/user/lab4_test/lab4_test.srcs/sources_1/imports/lab4_template/lab4_1.v:29]
+WARNING: [Synth 8-6901] identifier 'BCD0' is used before its declaration [C:/Users/user/lab4_test/lab4_test.srcs/sources_1/imports/lab4_template/lab4_1.v:29]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 838.883 ; gain = 237.223
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'lab4_1' [C:/Users/user/lab4_test/lab4_test.srcs/sources_1/imports/lab4_template/lab4_1.v:17]
+	Parameter INIT bound to: 3'b000 
+	Parameter STOP bound to: 3'b001 
+	Parameter COUNT bound to: 3'b010 
+INFO: [Synth 8-6157] synthesizing module 'clock_divider' [C:/Users/user/lab4_test/lab4_test.srcs/sources_1/imports/lab4_template/clock_divider.v:1]
+	Parameter n bound to: 17 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'clock_divider' (1#1) [C:/Users/user/lab4_test/lab4_test.srcs/sources_1/imports/lab4_template/clock_divider.v:1]
+INFO: [Synth 8-6157] synthesizing module 'clkDiv10' [C:/Users/user/lab4_test/lab4_test.srcs/sources_1/imports/lab4_template/lab4_1.v:1]
+	Parameter DIVISOR bound to: 10000000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'clkDiv10' (2#1) [C:/Users/user/lab4_test/lab4_test.srcs/sources_1/imports/lab4_template/lab4_1.v:1]
+INFO: [Synth 8-6157] synthesizing module 'debounce' [C:/Users/user/lab4_test/lab4_test.srcs/sources_1/imports/lab4_template/debounce.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'debounce' (3#1) [C:/Users/user/lab4_test/lab4_test.srcs/sources_1/imports/lab4_template/debounce.v:1]
+INFO: [Synth 8-6157] synthesizing module 'one_pulse' [C:/Users/user/lab4_test/lab4_test.srcs/sources_1/imports/lab4_template/one_pulse.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'one_pulse' (4#1) [C:/Users/user/lab4_test/lab4_test.srcs/sources_1/imports/lab4_template/one_pulse.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'lab4_1' (5#1) [C:/Users/user/lab4_test/lab4_test.srcs/sources_1/imports/lab4_template/lab4_1.v:17]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 886.832 ; gain = 285.172
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 896.031 ; gain = 294.371
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 896.031 ; gain = 294.371
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 896.031 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/user/lab4_test/lab4_test.srcs/constrs_1/imports/lab4_template/lab4_1.xdc]
+Finished Parsing XDC File [C:/Users/user/lab4_test/lab4_test.srcs/constrs_1/imports/lab4_template/lab4_1.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/user/lab4_test/lab4_test.srcs/constrs_1/imports/lab4_template/lab4_1.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/lab4_1_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/lab4_1_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/Users/user/lab4_test/lab4_test.srcs/constrs_1/imports/lab4_template/lab4_2.xdc]
+WARNING: [Vivado 12-584] No ports matched 'max'. [C:/Users/user/lab4_test/lab4_test.srcs/constrs_1/imports/lab4_template/lab4_2.xdc:14]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/user/lab4_test/lab4_test.srcs/constrs_1/imports/lab4_template/lab4_2.xdc:14]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'max'. [C:/Users/user/lab4_test/lab4_test.srcs/constrs_1/imports/lab4_template/lab4_2.xdc:15]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/user/lab4_test/lab4_test.srcs/constrs_1/imports/lab4_template/lab4_2.xdc:15]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'min'. [C:/Users/user/lab4_test/lab4_test.srcs/constrs_1/imports/lab4_template/lab4_2.xdc:16]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/user/lab4_test/lab4_test.srcs/constrs_1/imports/lab4_template/lab4_2.xdc:16]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'min'. [C:/Users/user/lab4_test/lab4_test.srcs/constrs_1/imports/lab4_template/lab4_2.xdc:17]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/user/lab4_test/lab4_test.srcs/constrs_1/imports/lab4_template/lab4_2.xdc:17]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'd0'. [C:/Users/user/lab4_test/lab4_test.srcs/constrs_1/imports/lab4_template/lab4_2.xdc:24]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/user/lab4_test/lab4_test.srcs/constrs_1/imports/lab4_template/lab4_2.xdc:24]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'd0'. [C:/Users/user/lab4_test/lab4_test.srcs/constrs_1/imports/lab4_template/lab4_2.xdc:25]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/user/lab4_test/lab4_test.srcs/constrs_1/imports/lab4_template/lab4_2.xdc:25]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'd1'. [C:/Users/user/lab4_test/lab4_test.srcs/constrs_1/imports/lab4_template/lab4_2.xdc:26]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/user/lab4_test/lab4_test.srcs/constrs_1/imports/lab4_template/lab4_2.xdc:26]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'd1'. [C:/Users/user/lab4_test/lab4_test.srcs/constrs_1/imports/lab4_template/lab4_2.xdc:27]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/user/lab4_test/lab4_test.srcs/constrs_1/imports/lab4_template/lab4_2.xdc:27]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'd2'. [C:/Users/user/lab4_test/lab4_test.srcs/constrs_1/imports/lab4_template/lab4_2.xdc:28]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/user/lab4_test/lab4_test.srcs/constrs_1/imports/lab4_template/lab4_2.xdc:28]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'd2'. [C:/Users/user/lab4_test/lab4_test.srcs/constrs_1/imports/lab4_template/lab4_2.xdc:29]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/user/lab4_test/lab4_test.srcs/constrs_1/imports/lab4_template/lab4_2.xdc:29]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'select'. [C:/Users/user/lab4_test/lab4_test.srcs/constrs_1/imports/lab4_template/lab4_2.xdc:112]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/user/lab4_test/lab4_test.srcs/constrs_1/imports/lab4_template/lab4_2.xdc:112]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'select'. [C:/Users/user/lab4_test/lab4_test.srcs/constrs_1/imports/lab4_template/lab4_2.xdc:113]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/user/lab4_test/lab4_test.srcs/constrs_1/imports/lab4_template/lab4_2.xdc:113]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'decrease'. [C:/Users/user/lab4_test/lab4_test.srcs/constrs_1/imports/lab4_template/lab4_2.xdc:116]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/user/lab4_test/lab4_test.srcs/constrs_1/imports/lab4_template/lab4_2.xdc:116]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'decrease'. [C:/Users/user/lab4_test/lab4_test.srcs/constrs_1/imports/lab4_template/lab4_2.xdc:117]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/user/lab4_test/lab4_test.srcs/constrs_1/imports/lab4_template/lab4_2.xdc:117]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'increase'. [C:/Users/user/lab4_test/lab4_test.srcs/constrs_1/imports/lab4_template/lab4_2.xdc:118]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/user/lab4_test/lab4_test.srcs/constrs_1/imports/lab4_template/lab4_2.xdc:118]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'increase'. [C:/Users/user/lab4_test/lab4_test.srcs/constrs_1/imports/lab4_template/lab4_2.xdc:119]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/user/lab4_test/lab4_test.srcs/constrs_1/imports/lab4_template/lab4_2.xdc:119]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Users/user/lab4_test/lab4_test.srcs/constrs_1/imports/lab4_template/lab4_2.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/user/lab4_test/lab4_test.srcs/constrs_1/imports/lab4_template/lab4_2.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/lab4_1_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/lab4_1_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1016.652 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1016.652 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1016.652 ; gain = 414.992
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1016.652 ; gain = 414.992
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1016.652 ; gain = 414.992
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'DIGIT_reg' in module 'lab4_1'
+INFO: [Synth 8-5544] ROM "DIGIT" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1016.652 ; gain = 414.992
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 7     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 4     
+	   5 Input      4 Bit        Muxes := 2     
+	   4 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 5     
+	   4 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module lab4_1 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 5     
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 4     
+	   5 Input      4 Bit        Muxes := 2     
+	   4 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 3     
+	   4 Input      1 Bit        Muxes := 1     
+Module clkDiv10 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module debounce 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module one_pulse 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\state_reg[2] )
+INFO: [Synth 8-3886] merging instance 'BCD0_reg[0]' (FDCE) to 'BCD2_reg[0]'
+INFO: [Synth 8-3886] merging instance 'BCD0_reg[1]' (FDPE) to 'BCD1_reg[1]'
+INFO: [Synth 8-3886] merging instance 'BCD0_reg[2]' (FDCE) to 'BCD2_reg[0]'
+INFO: [Synth 8-3886] merging instance 'BCD0_reg[3]' (FDPE) to 'BCD2_reg[1]'
+INFO: [Synth 8-3886] merging instance 'BCD1_reg[3]' (FDPE) to 'BCD2_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\BCD2_reg[0] )
+INFO: [Synth 8-3886] merging instance 'BCD2_reg[1]' (FDPE) to 'BCD2_reg[3]'
+INFO: [Synth 8-3886] merging instance 'BCD2_reg[2]' (FDCE) to 'BCD3_reg[2]'
+INFO: [Synth 8-3886] merging instance 'BCD3_reg[0]' (FDCE) to 'BCD3_reg[2]'
+INFO: [Synth 8-3886] merging instance 'BCD3_reg[1]' (FDPE) to 'BCD3_reg[3]'
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1016.652 ; gain = 414.992
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-565] redefining clock 'sys_clk_pin'
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1016.652 ; gain = 414.992
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1016.652 ; gain = 414.992
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1016.652 ; gain = 414.992
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 1016.652 ; gain = 414.992
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 1016.652 ; gain = 414.992
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 1016.652 ; gain = 414.992
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 1016.652 ; gain = 414.992
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 1016.652 ; gain = 414.992
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 1016.652 ; gain = 414.992
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    12|
+|3     |LUT1   |     4|
+|4     |LUT2   |     2|
+|5     |LUT3   |     6|
+|6     |LUT4   |    15|
+|7     |LUT5   |     4|
+|8     |LUT6   |     9|
+|9     |FDCE   |     5|
+|10    |FDPE   |     3|
+|11    |FDRE   |    60|
+|12    |IBUF   |     3|
+|13    |OBUF   |    27|
++------+-------+------+
+
+Report Instance Areas: 
++------+---------+--------------+------+
+|      |Instance |Module        |Cells |
++------+---------+--------------+------+
+|1     |top      |              |   151|
+|2     |  c10    |clkDiv10      |    52|
+|3     |  c1000  |clock_divider |    23|
+|4     |  db1    |debounce      |     6|
+|5     |  op1    |one_pulse     |     4|
++------+---------+--------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 1016.652 ; gain = 414.992
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:26 . Memory (MB): peak = 1016.652 ; gain = 294.371
+Synthesis Optimization Complete : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1016.652 ; gain = 414.992
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1016.652 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 12 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1021.426 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+36 Infos, 21 Warnings, 16 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 1021.426 ; gain = 715.039
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1021.426 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/user/lab4_test/lab4_test.runs/synth_1/lab4_1.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file lab4_1_utilization_synth.rpt -pb lab4_1_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Oct 16 14:02:57 2022...

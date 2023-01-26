@@ -1,0 +1,9 @@
+0.6
+2019.2
+Nov  6 2019
+21:57:16
+C:/Users/user/lab2/lab2.sim/sim_1/behav/xsim/glbl.v,1573089660,verilog,,,,glbl,,,,,,,,
+C:/Users/user/lab2/lab2.srcs/sim_1/imports/lab2_student_template/lab2_1_tb.v,1663726282,verilog,,,,Lab2_1_PATTERN;Lab2_1_TESTBED,,,,,,,,
+C:/Users/user/lab2/lab2.srcs/sim_1/imports/lab2_student_template/lab2_2_tb.v,1663743136,verilog,,,,Lab2_2_PATTERN;Lab2_2_TESTBED,,,,,,,,
+C:/Users/user/lab2/lab2.srcs/sources_1/imports/lab2_student_template/lab2_1.v,1664262221,verilog,,C:/Users/user/lab2/lab2.srcs/sim_1/imports/lab2_student_template/lab2_1_tb.v,,Encoder,,,,,,,,
+C:/Users/user/lab2/lab2.srcs/sources_1/imports/lab2_student_template/lab2_2.v,1664181326,verilog,,C:/Users/user/lab2/lab2.srcs/sim_1/imports/lab2_student_template/lab2_2_tb.v,,Decoder,,,,,,,,

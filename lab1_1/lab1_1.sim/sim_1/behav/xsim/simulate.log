@@ -1,0 +1,21 @@
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+===== Simulation ======
+[CORRECT] request = 0000, grant = 0000
+[CORRECT] request = 0001, grant = 0001
+[CORRECT] request = 0010, grant = 0010
+[CORRECT] request = 0011, grant = 0010
+[CORRECT] request = 0100, grant = 0100
+[CORRECT] request = 0101, grant = 0100
+[CORRECT] request = 0110, grant = 0100
+[CORRECT] request = 0111, grant = 0100
+[CORRECT] request = 1000, grant = 1000
+[CORRECT] request = 1001, grant = 1000
+[CORRECT] request = 1010, grant = 1000
+[CORRECT] request = 1011, grant = 1000
+[CORRECT] request = 1100, grant = 1000
+[CORRECT] request = 1101, grant = 1000
+[CORRECT] request = 1110, grant = 1000
+[CORRECT] request = 1111, grant = 1000
+All Correct!!
+$finish called at time : 80 ns : File "C:/Users/user/lab1_1/lab1_1.srcs/sim_1/imports/testbench/lab1_1_t.v" Line 47

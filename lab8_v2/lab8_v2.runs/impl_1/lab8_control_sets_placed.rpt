@@ -1,0 +1,350 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Mon Dec 12 17:57:30 2022
+| Host         : LAPTOP-799OM31Q running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file lab8_control_sets_placed.rpt
+| Design       : lab8
+| Device       : xc7a35t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |   272 |
+|    Minimum number of control sets                        |   272 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |  1579 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |   272 |
+| >= 0 to < 4        |     0 |
+| >= 4 to < 6        |     2 |
+| >= 6 to < 8        |     2 |
+| >= 8 to < 10       |     2 |
+| >= 10 to < 12      |   257 |
+| >= 12 to < 14      |     1 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     8 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              69 |           19 |
+| No           | No                    | Yes                    |             219 |           72 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |            3197 |         1570 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++---------------------------------------+-----------------------------------------------+------------------+------------------+----------------+
+|              Clock Signal             |                 Enable Signal                 | Set/Reset Signal | Slice Load Count | Bel Load Count |
++---------------------------------------+-----------------------------------------------+------------------+------------------+----------------+
+|  clk_IBUF_BUFG                        | kb/inst/inst/Ps2Interface_i/bits_count        | rst_IBUF         |                1 |              4 |
+|  clk_IBUF_BUFG                        | op2/E[0]                                      | op1/op_rst       |                1 |              4 |
+|  num_reg[21]                          |                                               | op1/op_rst       |                3 |              6 |
+|  nolabel_line1332/clk_divider_reg[15] |                                               | op1/op_rst       |                2 |              7 |
+|  clk_IBUF_BUFG                        | kb/inst/inst/Ps2Interface_i/rx_finish         | rst_IBUF         |                3 |              8 |
+|  clk_IBUF_BUFG                        | kb/inst/inst/Ps2Interface_i/rx_valid          | rst_IBUF         |                2 |              8 |
+|  clk_IBUF_BUFG                        | music_00/record[97][25]_i_1_n_0               | op1/op_rst       |                4 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[98][25]_i_1_n_0               | op1/op_rst       |                8 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[9][25]_i_1_n_0                | op1/op_rst       |                9 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[95][25]_i_1_n_0               | op1/op_rst       |                6 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[94][25]_i_1_n_0               | op1/op_rst       |                8 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[96][25]_i_1_n_0               | op1/op_rst       |                3 |             10 |
+|  clk_IBUF_BUFG                        | music_00/next_record                          | op1/op_rst       |                6 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[100][25]_i_1_n_0              | op1/op_rst       |                4 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[101][25]_i_1_n_0              | op1/op_rst       |                3 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[105][25]_i_1_n_0              | op1/op_rst       |                4 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[106][25]_i_1_n_0              | op1/op_rst       |                2 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[111][25]_i_1_n_0              | op1/op_rst       |                5 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[103][25]_i_1_n_0              | op1/op_rst       |                3 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[108][25]_i_1_n_0              | op1/op_rst       |                6 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[10][25]_i_1_n_0               | op1/op_rst       |                5 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[109][25]_i_1_n_0              | op1/op_rst       |                2 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[107][25]_i_1_n_0              | op1/op_rst       |                6 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[110][25]_i_1_n_0              | op1/op_rst       |                4 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[112][25]_i_1_n_0              | op1/op_rst       |                3 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[113][25]_i_1_n_0              | op1/op_rst       |                5 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[102][25]_i_1_n_0              | op1/op_rst       |                3 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[104][25]_i_1_n_0              | op1/op_rst       |                6 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[150][25]_i_1_n_0              | op1/op_rst       |                7 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[156][25]_i_1_n_0              | op1/op_rst       |                8 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[129][25]_i_1_n_0              | op1/op_rst       |                7 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[15][25]_i_1_n_0               | op1/op_rst       |                7 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[160][25]_i_1_n_0              | op1/op_rst       |                9 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[147][25]_i_1_n_0              | op1/op_rst       |                7 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[165][25]_i_1_n_0              | op1/op_rst       |                8 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[115][25]_i_1_n_0              | op1/op_rst       |                4 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[166][25]_i_1_n_0              | op1/op_rst       |                7 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[128][25]_i_1_n_0              | op1/op_rst       |                6 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[148][25]_i_1_n_0              | op1/op_rst       |                7 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[124][25]_i_1_n_0              | op1/op_rst       |                6 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[130][25]_i_1_n_0              | op1/op_rst       |                7 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[131][25]_i_1_n_0              | op1/op_rst       |                6 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[116][25]_i_1_n_0              | op1/op_rst       |                3 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[140][25]_i_1_n_0              | op1/op_rst       |                6 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[142][25]_i_1_n_0              | op1/op_rst       |                8 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[125][25]_i_1_n_0              | op1/op_rst       |                6 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[144][25]_i_1_n_0              | op1/op_rst       |                7 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[151][25]_i_1_n_0              | op1/op_rst       |                8 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[153][25]_i_1_n_0              | op1/op_rst       |                7 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[121][25]_i_1_n_0              | op1/op_rst       |                5 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[123][25]_i_1_n_0              | op1/op_rst       |                6 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[119][25]_i_1_n_0              | op1/op_rst       |                2 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[141][25]_i_1_n_0              | op1/op_rst       |                8 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[143][25]_i_1_n_0              | op1/op_rst       |                8 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[154][25]_i_1_n_0              | op1/op_rst       |               10 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[152][25]_i_1_n_0              | op1/op_rst       |                8 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[14][25]_i_1_n_0               | op1/op_rst       |                8 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[12][25]_i_1_n_0               | op1/op_rst       |                7 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[132][25]_i_1_n_0              | op1/op_rst       |                5 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[157][25]_i_1_n_0              | op1/op_rst       |                8 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[158][25]_i_1_n_0              | op1/op_rst       |               10 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[118][25]_i_1_n_0              | op1/op_rst       |                3 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[135][25]_i_1_n_0              | op1/op_rst       |                6 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[159][25]_i_1_n_0              | op1/op_rst       |               10 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[162][25]_i_1_n_0              | op1/op_rst       |                8 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[163][25]_i_1_n_0              | op1/op_rst       |                9 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[137][25]_i_1_n_0              | op1/op_rst       |                6 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[139][25]_i_1_n_0              | op1/op_rst       |                8 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[146][25]_i_1_n_0              | op1/op_rst       |                8 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[11][25]_i_1_n_0               | op1/op_rst       |                8 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[161][25]_i_1_n_0              | op1/op_rst       |                8 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[164][25]_i_1_n_0              | op1/op_rst       |                9 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[167][25]_i_1_n_0              | op1/op_rst       |                8 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[114][25]_i_1_n_0              | op1/op_rst       |                3 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[120][25]_i_1_n_0              | op1/op_rst       |                5 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[134][25]_i_1_n_0              | op1/op_rst       |                5 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[145][25]_i_1_n_0              | op1/op_rst       |                9 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[13][25]_i_1_n_0               | op1/op_rst       |                8 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[155][25]_i_1_n_0              | op1/op_rst       |                9 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[127][25]_i_1_n_0              | op1/op_rst       |               10 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[122][25]_i_1_n_0              | op1/op_rst       |                6 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[126][25]_i_1_n_0              | op1/op_rst       |                5 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[136][25]_i_1_n_0              | op1/op_rst       |                4 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[149][25]_i_1_n_0              | op1/op_rst       |                7 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[133][25]_i_1_n_0              | op1/op_rst       |                8 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[138][25]_i_1_n_0              | op1/op_rst       |                8 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[117][25]_i_1_n_0              | op1/op_rst       |                3 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[200][25]_i_1_n_0              | op1/op_rst       |                6 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[20][25]_i_1_n_0               | op1/op_rst       |                2 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[180][25]_i_1_n_0              | op1/op_rst       |                5 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[187][25]_i_1_n_0              | op1/op_rst       |                5 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[183][25]_i_1_n_0              | op1/op_rst       |                5 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[192][25]_i_1_n_0              | op1/op_rst       |                8 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[171][25]_i_1_n_0              | op1/op_rst       |                8 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[16][25]_i_1_n_0               | op1/op_rst       |                4 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[173][25]_i_1_n_0              | op1/op_rst       |                8 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[189][25]_i_1_n_0              | op1/op_rst       |                5 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[181][25]_i_1_n_0              | op1/op_rst       |                2 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[194][25]_i_1_n_0              | op1/op_rst       |                5 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[179][25]_i_1_n_0              | op1/op_rst       |                6 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[19][25]_i_1_n_0               | op1/op_rst       |                5 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[203][25]_i_1_n_0              | op1/op_rst       |                9 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[212][25]_i_1_n_0              | op1/op_rst       |                3 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[213][25]_i_1_n_0              | op1/op_rst       |                3 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[184][25]_i_1_n_0              | op1/op_rst       |                3 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[195][25]_i_1_n_0              | op1/op_rst       |                8 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[201][25]_i_1_n_0              | op1/op_rst       |                7 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[205][25]_i_1_n_0              | op1/op_rst       |                7 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[196][25]_i_1_n_0              | op1/op_rst       |                8 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[178][25]_i_1_n_0              | op1/op_rst       |                7 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[208][25]_i_1_n_0              | op1/op_rst       |                3 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[182][25]_i_1_n_0              | op1/op_rst       |                4 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[197][25]_i_1_n_0              | op1/op_rst       |                6 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[1][25]_i_1_n_0                | op1/op_rst       |                7 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[202][25]_i_1_n_0              | op1/op_rst       |                9 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[204][25]_i_1_n_0              | op1/op_rst       |                5 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[174][25]_i_1_n_0              | op1/op_rst       |                8 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[215][25]_i_1_n_0              | op1/op_rst       |                3 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[216][25]_i_1_n_0              | op1/op_rst       |                4 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[188][25]_i_1_n_0              | op1/op_rst       |                2 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[169][25]_i_1_n_0              | op1/op_rst       |                9 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[168][25]_i_1_n_0              | op1/op_rst       |               10 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[209][25]_i_1_n_0              | op1/op_rst       |                3 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[199][25]_i_1_n_0              | op1/op_rst       |                7 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[207][25]_i_1_n_0              | op1/op_rst       |                9 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[211][25]_i_1_n_0              | op1/op_rst       |                3 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[191][25]_i_1_n_0              | op1/op_rst       |                5 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[176][25]_i_1_n_0              | op1/op_rst       |                5 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[177][25]_i_1_n_0              | op1/op_rst       |                3 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[186][25]_i_1_n_0              | op1/op_rst       |                3 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[185][25]_i_1_n_0              | op1/op_rst       |                2 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[172][25]_i_1_n_0              | op1/op_rst       |               10 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[193][25]_i_1_n_0              | op1/op_rst       |                6 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[206][25]_i_1_n_0              | op1/op_rst       |                9 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[214][25]_i_1_n_0              | op1/op_rst       |                3 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[217][25]_i_1_n_0              | op1/op_rst       |                4 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[18][25]_i_1_n_0               | op1/op_rst       |                6 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[218][25]_i_1_n_0              | op1/op_rst       |                3 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[175][25]_i_1_n_0              | op1/op_rst       |               10 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[210][25]_i_1_n_0              | op1/op_rst       |                3 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[219][25]_i_1_n_0              | op1/op_rst       |                3 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[170][25]_i_1_n_0              | op1/op_rst       |                9 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[17][25]_i_1_n_0               | op1/op_rst       |                4 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[190][25]_i_1_n_0              | op1/op_rst       |                5 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[198][25]_i_1_n_0              | op1/op_rst       |                8 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[245][25]_i_1_n_0              | op1/op_rst       |                4 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[247][25]_i_1_n_0              | op1/op_rst       |                4 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[255][25]_i_1_n_0              | op1/op_rst       |                8 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[236][25]_i_1_n_0              | op1/op_rst       |                8 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[36][25]_i_1_n_0               | op1/op_rst       |                2 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[37][25]_i_1_n_0               | op1/op_rst       |                3 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[3][25]_i_1_n_0                | op1/op_rst       |                8 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[34][25]_i_1_n_0               | op1/op_rst       |                3 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[223][25]_i_1_n_0              | op1/op_rst       |                3 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[41][25]_i_1_n_0               | op1/op_rst       |                6 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[42][25]_i_1_n_0               | op1/op_rst       |                5 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[222][25]_i_1_n_0              | op1/op_rst       |                8 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[26][25]_i_1_n_0               | op1/op_rst       |                5 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[22][25]_i_1_n_0               | op1/op_rst       |                5 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[33][25]_i_1_n_0               | op1/op_rst       |                3 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[226][25]_i_1_n_0              | op1/op_rst       |                7 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[231][25]_i_1_n_0              | op1/op_rst       |                6 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[232][25]_i_1_n_0              | op1/op_rst       |                8 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[224][25]_i_1_n_0              | op1/op_rst       |                5 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[253][25]_i_1_n_0              | op1/op_rst       |                4 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[235][25]_i_1_n_0              | op1/op_rst       |                6 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[239][25]_i_1_n_0              | op1/op_rst       |               10 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[21][25]_i_1_n_0               | op1/op_rst       |                2 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[229][25]_i_1_n_0              | op1/op_rst       |                7 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[240][25]_i_1_n_0              | op1/op_rst       |                4 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[228][25]_i_1_n_0              | op1/op_rst       |                6 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[230][25]_i_1_n_0              | op1/op_rst       |                8 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[25][25]_i_1_n_0               | op1/op_rst       |                4 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[27][25]_i_1_n_0               | op1/op_rst       |                4 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[234][25]_i_1_n_0              | op1/op_rst       |                8 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[251][25]_i_1_n_0              | op1/op_rst       |                5 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[29][25]_i_1_n_0               | op1/op_rst       |                3 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[237][25]_i_1_n_0              | op1/op_rst       |                6 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[28][25]_i_1_n_0               | op1/op_rst       |                7 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[2][25]_i_1_n_0                | op1/op_rst       |                8 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[30][25]_i_1_n_0               | op1/op_rst       |                4 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[32][25]_i_1_n_0               | op1/op_rst       |                3 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[35][25]_i_1_n_0               | op1/op_rst       |                4 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[39][25]_i_1_n_0               | op1/op_rst       |                4 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[227][25]_i_1_n_0              | op1/op_rst       |                8 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[220][25]_i_1_n_0              | op1/op_rst       |                5 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[241][25]_i_1_n_0              | op1/op_rst       |                5 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[250][25]_i_1_n_0              | op1/op_rst       |                5 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[254][25]_i_1_n_0              | op1/op_rst       |                6 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[248][25]_i_1_n_0              | op1/op_rst       |                4 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[225][25]_i_1_n_0              | op1/op_rst       |                5 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[249][25]_i_1_n_0              | op1/op_rst       |                4 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[40][25]_i_1_n_0               | op1/op_rst       |                3 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[252][25]_i_1_n_0              | op1/op_rst       |                5 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[24][25]_i_1_n_0               | op1/op_rst       |                4 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[238][25]_i_1_n_0              | op1/op_rst       |                7 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[242][25]_i_1_n_0              | op1/op_rst       |                4 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[31][25]_i_1_n_0               | op1/op_rst       |                8 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[23][25]_i_1_n_0               | op1/op_rst       |                5 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[38][25]_i_1_n_0               | op1/op_rst       |                3 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[244][25]_i_1_n_0              | op1/op_rst       |                4 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[246][25]_i_1_n_0              | op1/op_rst       |                5 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[221][25]_i_1_n_0              | op1/op_rst       |                3 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[233][25]_i_1_n_0              | op1/op_rst       |                8 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[243][25]_i_1_n_0              | op1/op_rst       |                4 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[64][25]_i_1_n_0               | op1/op_rst       |                2 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[65][25]_i_1_n_0               | op1/op_rst       |                2 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[51][25]_i_1_n_0               | op1/op_rst       |                2 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[73][25]_i_1_n_0               | op1/op_rst       |                2 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[4][25]_i_1_n_0                | op1/op_rst       |                6 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[61][25]_i_1_n_0               | op1/op_rst       |                3 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[62][25]_i_1_n_0               | op1/op_rst       |                5 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[74][25]_i_1_n_0               | op1/op_rst       |                2 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[50][25]_i_1_n_0               | op1/op_rst       |                2 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[78][25]_i_1_n_0               | op1/op_rst       |                8 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[79][25]_i_1_n_0               | op1/op_rst       |                4 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[71][25]_i_1_n_0               | op1/op_rst       |                3 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[77][25]_i_1_n_0               | op1/op_rst       |                6 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[63][25]_i_1_n_0               | op1/op_rst       |                7 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[57][25]_i_1_n_0               | op1/op_rst       |                3 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[46][25]_i_1_n_0               | op1/op_rst       |                6 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[47][25]_i_1_n_0               | op1/op_rst       |                6 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[7][25]_i_1_n_0                | op1/op_rst       |                7 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[5][25]_i_1_n_0                | op1/op_rst       |                9 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[56][25]_i_1_n_0               | op1/op_rst       |                4 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[80][25]_i_1_n_0               | op1/op_rst       |                7 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[81][25]_i_1_n_0               | op1/op_rst       |                4 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[59][25]_i_1_n_0               | op1/op_rst       |                4 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[82][25]_i_1_n_0               | op1/op_rst       |                2 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[60][25]_i_1_n_0               | op1/op_rst       |                7 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[44][25]_i_1_n_0               | op1/op_rst       |                2 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[49][25]_i_1_n_0               | op1/op_rst       |                2 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[67][25]_i_1_n_0               | op1/op_rst       |                3 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[85][25]_i_1_n_0               | op1/op_rst       |                3 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[87][25]_i_1_n_0               | op1/op_rst       |                5 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[52][25]_i_1_n_0               | op1/op_rst       |                2 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[72][25]_i_1_n_0               | op1/op_rst       |                6 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[75][25]_i_1_n_0               | op1/op_rst       |                4 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[66][25]_i_1_n_0               | op1/op_rst       |                2 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[83][25]_i_1_n_0               | op1/op_rst       |                3 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[84][25]_i_1_n_0               | op1/op_rst       |                2 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[88][25]_i_1_n_0               | op1/op_rst       |                5 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[54][25]_i_1_n_0               | op1/op_rst       |                3 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[89][25]_i_1_n_0               | op1/op_rst       |                8 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[45][25]_i_1_n_0               | op1/op_rst       |                7 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[8][25]_i_1_n_0                | op1/op_rst       |                8 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[76][25]_i_1_n_0               | op1/op_rst       |                2 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[70][25]_i_1_n_0               | op1/op_rst       |                2 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[55][25]_i_1_n_0               | op1/op_rst       |                4 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[43][25]_i_1_n_0               | op1/op_rst       |                4 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[86][25]_i_1_n_0               | op1/op_rst       |                2 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[90][25]_i_1_n_0               | op1/op_rst       |                2 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[91][25]_i_1_n_0               | op1/op_rst       |                2 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[92][25]_i_1_n_0               | op1/op_rst       |                5 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[93][25]_i_1_n_0               | op1/op_rst       |                5 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[53][25]_i_1_n_0               | op1/op_rst       |                4 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[68][25]_i_1_n_0               | op1/op_rst       |                2 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[6][25]_i_1_n_0                | op1/op_rst       |                7 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[48][25]_i_1_n_0               | op1/op_rst       |                4 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[69][25]_i_1_n_0               | op1/op_rst       |                5 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[58][25]_i_1_n_0               | op1/op_rst       |                2 |             10 |
+|  clk_IBUF_BUFG                        | music_00/record[99][25]_i_1_n_0               | op1/op_rst       |                7 |             10 |
+|  clk_IBUF_BUFG                        | kb/inst/inst/Ps2Interface_i/frame[10]_i_1_n_0 | rst_IBUF         |                3 |             11 |
+|  num_reg[21]                          | playerCtrl_00/next_ibeat                      | op1/op_rst       |                4 |             12 |
+|  clk_IBUF_BUFG                        | kb/key                                        | rst_IBUF         |                8 |             17 |
+|  num_reg[21]                          | playerCtrl_00/rd[11]_i_1_n_0                  | op1/op_rst       |                8 |             29 |
+|  audio_lrck_OBUF_BUFG                 |                                               | op1/op_rst       |               10 |             32 |
+|  clk_IBUF_BUFG                        | kb/E[0]                                       | op1/op_rst       |               12 |             32 |
+|  clk_IBUF_BUFG                        |                                               | rst_IBUF         |               22 |             61 |
+|  clk_IBUF_BUFG                        |                                               |                  |               19 |             69 |
+|  clk_IBUF_BUFG                        |                                               | op1/op_rst       |               35 |            113 |
+|  clk_IBUF_BUFG                        | kb/op/E[0]                                    | rst_IBUF         |              144 |            512 |
++---------------------------------------+-----------------------------------------------+------------------+------------------+----------------+
+
+

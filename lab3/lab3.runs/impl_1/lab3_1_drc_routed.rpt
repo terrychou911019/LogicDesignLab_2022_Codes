@@ -1,0 +1,128 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Tue Oct  4 21:09:46 2022
+| Host         : LAPTOP-799OM31Q running 64-bit major release  (build 9200)
+| Command      : report_drc -file lab3_1_drc_routed.rpt -pb lab3_1_drc_routed.pb -rpx lab3_1_drc_routed.rpx
+| Design       : lab3_1
+| Device       : xc7a35tcpg236-1
+| Speed File   : -1
+| Design State : Fully Routed
+------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 18
++-------------+----------+-------------------------------------------------------------+------------+
+| Rule        | Severity | Description                                                 | Violations |
++-------------+----------+-------------------------------------------------------------+------------+
+| PDRC-153    | Warning  | Gated clock check                                           | 17         |
+| PLHOLDVIO-2 | Warning  | Non-Optimal connections which could lead to hold violations | 1          |
++-------------+----------+-------------------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+PDRC-153#1 Warning
+Gated clock check  
+Net clkDivBy27/num_reg[26]_0 is a gated clock net sourced by a combinational pin clkDivBy27/counter[3]_i_3/O, cell clkDivBy27/counter[3]_i_3. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#2 Warning
+Gated clock check  
+Net next_led_reg[0]_i_2_n_0 is a gated clock net sourced by a combinational pin next_led_reg[0]_i_2/O, cell next_led_reg[0]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#3 Warning
+Gated clock check  
+Net next_led_reg[10]_i_2_n_0 is a gated clock net sourced by a combinational pin next_led_reg[10]_i_2/O, cell next_led_reg[10]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#4 Warning
+Gated clock check  
+Net next_led_reg[11]_i_2_n_0 is a gated clock net sourced by a combinational pin next_led_reg[11]_i_2/O, cell next_led_reg[11]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#5 Warning
+Gated clock check  
+Net next_led_reg[12]_i_2_n_0 is a gated clock net sourced by a combinational pin next_led_reg[12]_i_2/O, cell next_led_reg[12]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#6 Warning
+Gated clock check  
+Net next_led_reg[13]_i_2_n_0 is a gated clock net sourced by a combinational pin next_led_reg[13]_i_2/O, cell next_led_reg[13]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#7 Warning
+Gated clock check  
+Net next_led_reg[14]_i_2_n_0 is a gated clock net sourced by a combinational pin next_led_reg[14]_i_2/O, cell next_led_reg[14]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#8 Warning
+Gated clock check  
+Net next_led_reg[15]_i_2_n_0 is a gated clock net sourced by a combinational pin next_led_reg[15]_i_2/O, cell next_led_reg[15]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#9 Warning
+Gated clock check  
+Net next_led_reg[1]_i_2_n_0 is a gated clock net sourced by a combinational pin next_led_reg[1]_i_2/O, cell next_led_reg[1]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#10 Warning
+Gated clock check  
+Net next_led_reg[2]_i_2_n_0 is a gated clock net sourced by a combinational pin next_led_reg[2]_i_2/O, cell next_led_reg[2]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#11 Warning
+Gated clock check  
+Net next_led_reg[3]_i_2_n_0 is a gated clock net sourced by a combinational pin next_led_reg[3]_i_2/O, cell next_led_reg[3]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#12 Warning
+Gated clock check  
+Net next_led_reg[4]_i_2_n_0 is a gated clock net sourced by a combinational pin next_led_reg[4]_i_2/O, cell next_led_reg[4]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#13 Warning
+Gated clock check  
+Net next_led_reg[5]_i_2_n_0 is a gated clock net sourced by a combinational pin next_led_reg[5]_i_2/O, cell next_led_reg[5]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#14 Warning
+Gated clock check  
+Net next_led_reg[6]_i_2_n_0 is a gated clock net sourced by a combinational pin next_led_reg[6]_i_2/O, cell next_led_reg[6]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#15 Warning
+Gated clock check  
+Net next_led_reg[7]_i_2_n_0 is a gated clock net sourced by a combinational pin next_led_reg[7]_i_2/O, cell next_led_reg[7]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#16 Warning
+Gated clock check  
+Net next_led_reg[8]_i_2_n_0 is a gated clock net sourced by a combinational pin next_led_reg[8]_i_2/O, cell next_led_reg[8]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#17 Warning
+Gated clock check  
+Net next_led_reg[9]_i_2_n_0 is a gated clock net sourced by a combinational pin next_led_reg[9]_i_2/O, cell next_led_reg[9]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PLHOLDVIO-2#1 Warning
+Non-Optimal connections which could lead to hold violations  
+A LUT clkDivBy27/counter[3]_i_3 is driving clock pin of 20 cells. This could lead to large hold time violations. Involved cells are:
+counter_reg[0], counter_reg[1], counter_reg[2], counter_reg[3], led_reg[0], led_reg[10], led_reg[11], led_reg[12], led_reg[13], led_reg[14], led_reg[15], led_reg[1], led_reg[2], led_reg[3], led_reg[4] (the first 15 of 20 listed)
+Related violations: <none>
+
+

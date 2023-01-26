@@ -1,0 +1,18 @@
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto cc33d9cca98d4fcc80e87181c2cd0597 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Lab2_2_TESTBED_behav xil_defaultlib.Lab2_2_TESTBED xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "C:/Users/user/lab2/lab2.srcs/sources_1/imports/lab2_student_template/lab2_1.v" Line 1. Module Encoder doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/user/lab2/lab2.srcs/sources_1/imports/lab2_student_template/lab2_2.v" Line 1. Module Decoder doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.Encoder
+Compiling module xil_defaultlib.Decoder
+Compiling module xil_defaultlib.Lab2_2_PATTERN
+Compiling module xil_defaultlib.Lab2_2_TESTBED
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Lab2_2_TESTBED_behav
